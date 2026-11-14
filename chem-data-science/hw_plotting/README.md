@@ -1,19 +1,14 @@
-# 숙제 · 좋은 그림 그리기 (15 ~ 17강)
+# 숙제 · 좋은 그림 그리기 (15 ~ 17강) — 데이터
 
-화학데이터사이언스 2026-2
+화학데이터사이언스 2026-2. 과제 내용은 수업 공지를 본다.
 
-## Colab 에서 열기 (파일을 올릴 필요 없음)
+## 불러오기 (Colab)
 
-[학생용 노트북 열기](https://colab.research.google.com/github/gwanyeong/my_projects/blob/master/chem-data-science/hw_plotting/HW_plotting_%ED%95%99%EC%83%9D%EC%9A%A9.ipynb)
-
-- 링크로 연 다음 `파일 → Drive에 사본 저장` 을 하면 자기 드라이브에 저장된다.
-- 데이터는 노트북의 `BASE` 주소 (이 폴더의 `data/`) 에서 바로 읽는다.
-
-## 과제
-
-- 카드 A ~ G 의 목표 그림 중 **2 장 이상**을 처음부터 다시 그리고 **더 좋게** 고친다. 목표 그림에는 고칠 점이 숨어 있다.
-- 목표 그림 없이 **자유 그림 1 장 이상**.
-- AI 도구 사용 가능. 노트북 맨 아래에 사용 기록을 남긴다.
+```python
+import pandas as pd
+BASE = "https://raw.githubusercontent.com/gwanyeong/my_projects/master/chem-data-science/hw_plotting/data/"
+titration = pd.read_csv(BASE + "titration.csv")
+```
 
 ## data/
 
@@ -25,7 +20,3 @@
 | `tio2_xrd.csv` | TiO₂ 아나타제 · 루타일 XRD 패턴 (Cu Kα) | 결정 구조로 계산 (pymatgen) + 잡음. 측정값 아님 |
 | `elements.csv` | 원소 86 개의 주기 · 족 · 블록 · 전기음성도 · 원자 반지름 · 이온화에너지 · 녹는점 · 밀도 | pymatgen 원소 자료 |
 | `liquids.csv` | 액체 6 종의 온도별 증기압 · 밀도 · 점도 (1 atm) | CoolProp 물성 상태식 |
-
-## targets/
-
-카드 A ~ G 의 목표 그림.
